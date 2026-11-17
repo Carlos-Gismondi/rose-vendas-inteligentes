@@ -14,7 +14,7 @@
 
 \- Função: Tech Lead
 
-\- Ferramenta utilizada: Codex
+\- Ferramenta utilizada: Codex ( ChatGPT)
 
 \- Data: 16/11/2026
 
@@ -116,7 +116,7 @@ Construir a documentação complementar e organizar o fluxo de trabalho do repos
 
 
 
-> Vamos fazer juntos e vc vai me explicando cada etapa, sempre um passo por vez
+> sempre um passo por vez
 
 
 
@@ -150,10 +150,6 @@ Foram realizadas as seguintes atividades:
 
 
 
-Solicitei que o trabalho fosse conduzido em conjunto, com explicações e uma etapa por vez.
-
-
-
 A orientação foi adaptada para que eu executasse os comandos no meu computador e informasse o resultado antes de continuar.
 
 
@@ -166,7 +162,7 @@ Executei os comandos, salvei os documentos, realizei os commits e enviei as alte
 
 
 
-A IA apoiou a análise do código, a redação dos documentos e a explicação do fluxo de versionamento.
+A IA analisou o código, a redação dos documentos e a explicação do fluxo de versionamento.
 
 
 
