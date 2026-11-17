@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "Rose Vendas Inteligentes",
+    "slug": "rose-vendas-inteligentes",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#FAF7F9"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.rose.vendasinteligentes"
+    }
+  }
+}
