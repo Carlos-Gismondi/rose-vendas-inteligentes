@@ -321,6 +321,16 @@ Sugestões de evolução; **não implementadas nesta versão**:
 
 Não versione `node_modules`, cache do Expo, arquivos `.env`, credenciais ou dados pessoais de clientes. O `.gitignore` acompanha a preparação do repositório.
 
+## 📚 Documentação do projeto
+
+| Documento | Conteúdo |
+| --- | --- |
+| [PRD](docs/prd.md) | Problema, persona, escopo e requisitos do produto |
+| [Modelo de dados](docs/modelo-de-dados.md) | Informações armazenadas e relacionamentos |
+| [Arquitetura técnica](docs/arquitetura.md) | Tecnologias, estrutura e funcionamento do aplicativo |
+| [Prompt log — Tech Lead](docs/prompt-log-tech-lead.md) | Uso de IA e contribuições do responsável técnico |
+
+O PRD está em revisão pela equipe. Os testes funcionais ainda precisam de evidências de execução.
 
 ---
 
