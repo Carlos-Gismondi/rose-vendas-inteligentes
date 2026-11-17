@@ -147,19 +147,6 @@ O preço do pedido é registrado separadamente do preço do catálogo.
 \## 6. Relacionamentos
 
 
-
-```mermaid
-
-erDiagram
-
-&#x20;   CLIENTES ||--o{ PEDIDOS : possui
-
-&#x20;   PRODUTOS ||--o{ PEDIDOS : aparece\_em
-
-```
-
-
-
 \- Um cliente pode ter vários pedidos.
 
 \- Um produto pode aparecer em vários pedidos.
