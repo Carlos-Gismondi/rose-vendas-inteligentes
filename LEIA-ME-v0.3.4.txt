@@ -1,0 +1,14 @@
+NATURÉ — TOPBAR v0.3.4
+
+Atualização incremental para a versão v0.3.3 homologada.
+
+Copie o arquivo Topbar.tsx e o novo Topbar.css para:
+frontend/src/components/layout/
+
+O componente importa Topbar.css automaticamente. Nenhuma alteração na Sidebar.
+
+Recursos: prata acetinado, 72px, sino Bell com contador, painel de notificações com leitura individual e coletiva, menu Rose/Consultora, layout responsivo.
+
+IMPORTANTE: dados de demonstração. As notificações são geradas a partir dos contatos urgentes do AppContext. A leitura é mantida apenas enquanto o componente estiver montado. 'Meu perfil' e 'Sair' mostram avisos e não fazem alterações reais, pois autenticação/perfil ainda não existem neste protótipo.
+
+Para iniciar: npm.cmd run dev (na pasta frontend).

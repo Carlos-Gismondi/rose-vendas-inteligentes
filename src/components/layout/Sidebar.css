@@ -1,0 +1,40 @@
+
+.brand{padding:0 0 20px;justify-content:center;min-height:100px}
+.brand-logo{display:block;width:100%;max-width:180px;height:auto;max-height:104px;object-fit:contain;background: transparent;border-radius:12px;padding:7px;box-shadow:0 2px 8px #002c191a}
+.collapsed .brand{padding:0 0 18px;min-height:62px}
+.collapsed .brand-logo{width:49px;max-height:49px;padding:3px;border-radius:9px}
+.sidebar-bottom{margin-top:auto;padding-bottom:4px}
+@media(max-width:760px){.brand{min-height:100px}.brand-logo{max-width:180px}}
+
+
+/* Naturé v0.3.1 — tema prata acetinado da sidebar */
+.sidebar {
+  background: linear-gradient(165deg, #f2f4f5 0%, #e8ebed 48%, #d5dadd 100%);
+  color: #064d2b;
+  border-right: none;
+}
+.sidebar .nav-item { color: #064d2b; }
+.sidebar .nav-item:hover { background: #d1e5d7; color: #064d2b; }
+.sidebar .nav-item.selected,
+.sidebar .nav-item.selected:hover { background: #16803c; color: #fff; }
+.sidebar .sidebar-bottom { color: #064d2b; }
+.sidebar .brand-logo { box-shadow: none; background: transparent; }
+
+/* v0.3.2 — troca automática entre marca completa e símbolo */
+.sidebar .brand { display:flex; align-items:center; justify-content:center; min-height:100px; padding:0 0 20px; }
+.sidebar .brand-logo { display:block; width:100%; max-width:180px; max-height:104px; height:auto; object-fit:contain; background:transparent; border:0; border-radius:0; padding:0; box-shadow:none; }
+.sidebar .brand-logo-icon { display:none; }
+.app.collapsed .sidebar .brand { min-height:62px; padding:0 0 18px; }
+.app.collapsed .sidebar .brand-logo-full { display:none; }
+.app.collapsed .sidebar .brand-logo-icon { display:block; width:49px; height:49px; max-width:49px; max-height:49px; object-fit:contain; }
+@media (max-width:760px) {
+  .sidebar .brand-logo-full { display:block; }
+  .sidebar .brand-logo-icon { display:none; }
+  .app.collapsed .sidebar.open .brand-logo-full { display:block; }
+  .app.collapsed .sidebar.open .brand-logo-icon { display:none; }
+}
+
+/* v0.3.3 — ícones Lucide uniformes, sem alterar Dashboard e Configurações */
+.sidebar .nav-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 20px; width: 20px; height: 20px; line-height: 1; }
+.sidebar .nav-icon svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2; flex-shrink: 0; }
+.sidebar .nav-item.selected .nav-icon { color: #fff; }

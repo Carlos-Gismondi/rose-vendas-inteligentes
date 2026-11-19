@@ -1,0 +1,31 @@
+/* Naturé v0.3.4 — Topbar prata acetinada, sem borda inferior */
+.nature-topbar{height:72px;min-height:72px;background:linear-gradient(165deg,#f2f4f5 0%,#e8ebed 48%,#d5dadd 100%);border-bottom:0;padding:0 28px;position:relative;z-index:22}
+.nature-top-left,.nature-top-right{min-width:0}
+.nature-page-heading{display:flex;flex-direction:column;gap:3px;min-width:0}
+.nature-page-heading h1{color:#064d2b;font-size:22px;line-height:1.1;margin:0}
+.nature-page-heading>span{color:#66716d;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nature-topbar .demo-badge{white-space:nowrap}
+.nature-popover-anchor{position:relative;display:flex;align-items:center}
+.nature-top-action{width:40px;height:40px;display:grid;place-items:center;position:relative;border:0;background:transparent;color:#064d2b;border-radius:10px}
+.nature-top-action:hover,.nature-user-button:hover{background:#ffffff85}
+.nature-bell-count{position:absolute;top:0;right:0;min-width:19px;height:19px;padding:0 4px;border-radius:12px;background:#c62f3f;color:white;font-size:10px;font-weight:800;display:grid;place-items:center;border:2px solid #e8ebed}
+.nature-user-button{display:flex;align-items:center;gap:10px;background:transparent;border:0;border-radius:10px;padding:5px 7px;color:#064d2b}
+.nature-user-text{display:flex;flex-direction:column;align-items:flex-end;gap:2px;line-height:1.15}
+.nature-user-text strong{font-size:13px}.nature-user-text small{font-size:11px;color:#67756d}
+.nature-user-avatar{background:#d4e9d9;color:#064d2b;width:36px;height:36px;font-size:14px}
+.nature-dropdown{position:absolute;right:0;top:calc(100% + 12px);width:min(365px,calc(100vw - 28px));background:#fff;border:1px solid #e5eae6;border-radius:13px;box-shadow:0 14px 36px #152e1b26;z-index:80;color:#20352a;overflow:hidden}
+.nature-dropdown-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px;border-bottom:1px solid #edf0ed}
+.nature-dropdown-head strong{font-size:15px;color:#064d2b}.nature-dropdown-head span{font-size:11px;color:#66756b}
+.nature-notification-list{max-height:330px;overflow-y:auto}
+.nature-notification{display:flex;align-items:center;gap:8px;padding:13px 15px;border-bottom:1px solid #f0f2f0;background:#f4faf5}
+.nature-notification.is-read{background:#fff;opacity:.75}
+.nature-notification-text{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}
+.nature-notification-text strong{font-size:12px;color:#154b2b}.nature-notification-text span{font-size:11px;color:#65736a;overflow-wrap:anywhere}
+.nature-notification>button{border:0;border-radius:8px;background:#e0f1e5;color:#087637;width:30px;height:30px;display:grid;place-items:center;flex:none}
+.nature-mark-all{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;border:0;background:#fff;color:#087637;font-size:12px;font-weight:700;padding:14px}
+.nature-mark-all:disabled{color:#9aa69d;cursor:default}.nature-empty-notifications{padding:18px;font-size:12px;color:#6d7b70}
+.nature-user-menu{width:220px;padding:7px}
+.nature-user-menu button{width:100%;display:flex;align-items:center;gap:10px;border:0;background:transparent;text-align:left;border-radius:8px;padding:11px 12px;font-size:13px;color:#064d2b}
+.nature-user-menu button:hover{background:#edf6ef}.nature-user-menu button.nature-logout{color:#b83242;border-top:1px solid #edf0ed;border-radius:0;margin-top:4px}
+@media(max-width:760px){.nature-topbar{height:72px;min-height:72px;padding:0 12px;gap:7px}.nature-top-left,.nature-top-right{gap:7px}.nature-page-heading h1{font-size:18px}.nature-page-heading>span{font-size:10px;max-width:175px}.nature-user-text{display:none}.nature-user-chevron{display:none}.nature-user-button{padding:4px}.nature-dropdown{position:fixed;top:68px;right:12px;width:min(365px,calc(100vw - 24px))}}
+@media(max-width:390px){.nature-page-heading>span{max-width:130px}.nature-topbar{padding:0 9px}.nature-top-left,.nature-top-right{gap:3px}}

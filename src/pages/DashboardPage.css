@@ -1,0 +1,10 @@
+.nature-dashboard-stats{grid-template-columns:repeat(3,minmax(0,1fr));}
+.nature-dashboard-stats .stat>svg{flex:none;color:#064D2B;}
+.nature-dashboard-stats .stat.alert>svg{color:#bb2434;}
+.nature-dashboard-stats .stat-action{font:inherit;width:100%;cursor:pointer;}
+.nature-dashboard-stats .stat-action:hover{filter:brightness(.98);}
+.client-filter-bar{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;}
+.client-filter-bar button{border:0;border-radius:8px;padding:9px 13px;background:#edf4ee;color:#315b3b;cursor:pointer;}
+.client-filter-bar button.active{background:#16803C;color:#fff;}
+@media(max-width:760px){.nature-dashboard-stats{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:420px){.nature-dashboard-stats{grid-template-columns:1fr;}}

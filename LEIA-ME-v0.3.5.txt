@@ -1,0 +1,10 @@
+NATURE v0.3.5 - ATUALIZACAO PARCIAL DO DASHBOARD
+
+Copie a pasta src para dentro de frontend, mesclando e substituindo somente os arquivos correspondentes.
+NAO substitua a Sidebar nem a Topbar: elas nao estao neste pacote.
+
+Alteracoes: 6 cards, 3 por linha em desktop; icones Lucide; card inadimplentes em segundo lugar, com filtro em Clientes.
+ATENCAO: os dados atuais de clientes NAO incluem informacao financeira. Por isso o contador de inadimplentes mostra 0 ate que dados de inadimplencia sejam cadastrados; atraso de recompra nao equivale a inadimplencia.
+Os demais numeros continuam demonstrativos, conforme a versao anterior.
+
+Para testar: npm.cmd run dev
