@@ -1,0 +1,80 @@
+.clientes-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}.clientes-metric{background:var(--surface,#fff);border:1px solid #dce8dc;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:5px}.clientes-metric strong{font-size:27px;color:#247847}.clientes-filters{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 16px}.clientes-filters .search{flex:1 1 280px}.clientes-filters select{min-width:145px}.clientes-actions{display:flex;gap:8px;flex-wrap:wrap}.clientes-badge{border-radius:15px;padding:4px 9px;font-weight:600;font-size:12px}.classe-1{background:#efe2d5;color:#744827}.classe-2{background:#e9ebef;color:#535c68}.classe-3{background:#fff0bc;color:#876500}.classe-4{background:#d9f3ff;color:#13607e}.clientes-pagination{display:flex;align-items:center;justify-content:flex-end;gap:12px;padding-top:14px}.clientes-alert{padding:12px;border-radius:8px;margin:12px 0}.clientes-alert.error{background:#ffe6e4;color:#a52822}.clientes-alert.success{background:#e0f7e7;color:#17613a}.clientes-modal{width:min(960px,96vw);max-height:90vh;overflow:auto}.clientes-modal-header{display:flex;justify-content:space-between;gap:16px}.clientes-tabs{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0 18px;border-bottom:1px solid #ddd}.clientes-tabs button{padding:10px;border:0;background:transparent;cursor:pointer}.clientes-tabs button.active{border-bottom:3px solid #288552;color:#22764a;font-weight:700}.clientes-fields{border:0;padding:0;margin:0;min-width:0}.clientes-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.clientes-grid label,.clientes-preferencia label{display:flex;flex-direction:column;gap:5px}.clientes-grid input,.clientes-grid select,.clientes-grid textarea,.clientes-preferencia input{width:100%;box-sizing:border-box}.clientes-wide{grid-column:1/-1}.clientes-preferencia{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin:10px 0;align-items:end}.clientes-history{padding:10px;border-bottom:1px solid #ddd}.clientes-interaction{display:flex;flex-direction:column;gap:8px;margin-top:15px}.clientes-comercial{padding:14px;background:#f3f9f4;border-radius:8px}.clientes-modal footer{position:sticky;bottom:0;background:var(--surface,#fff);padding:12px 0;z-index:2}@media(max-width:700px){.clientes-metrics{grid-template-columns:repeat(2,1fr)}.clientes-grid,.clientes-preferencia{grid-template-columns:1fr}.clientes-modal{width:98vw}.clientes-tabs{flex-wrap:nowrap;overflow-x:auto}}
+
+
+/* Naturé v0.3.5 — padronização visual do módulo Clientes.
+   Escopo restrito: não modifica Dashboard, Sidebar ou outros módulos. */
+.clientes-page{--clientes-green:#087b3c;--clientes-dark:#07552d;--clientes-silver:#e9ecee;--clientes-line:#dfe6e1;color:#173d29}
+.clientes-page .page-intro{align-items:center;margin-bottom:20px;gap:16px}
+.clientes-page .page-intro h2{color:var(--clientes-dark);font-size:clamp(23px,2.2vw,29px);font-weight:800;letter-spacing:-.025em}
+.clientes-page .page-intro p{color:#687a70;font-size:13px}
+.clientes-page button.primary{border:1px solid #08733a;border-radius:10px;background:linear-gradient(135deg,#149544,#087337);color:#fff;font-weight:700;padding:11px 17px;box-shadow:0 3px 9px #064e2720;min-height:42px}
+.clientes-page button.primary:hover{filter:brightness(1.05)}
+.clientes-page .clientes-metrics{gap:14px;margin:0 0 20px}
+.clientes-page .clientes-metric{min-height:108px;border:1px solid #e0e9e2;border-radius:14px;background:linear-gradient(145deg,#fff 0%,#edf8f0 100%);box-shadow:0 3px 10px #153b1d0b;padding:18px 20px;justify-content:center;gap:9px}
+.clientes-page .clientes-metric:nth-child(2){background:linear-gradient(145deg,#fff,#e9f7ee)}
+.clientes-page .clientes-metric:nth-child(3){background:linear-gradient(145deg,#fff,#f1f2f4)}
+.clientes-page .clientes-metric:nth-child(4){background:linear-gradient(145deg,#fff,#e9f5f6)}
+.clientes-page .clientes-metric span{color:#4b6857;font-size:13px;font-weight:600}
+.clientes-page .clientes-metric strong{color:#075d2e;font-size:30px;line-height:1.1;font-weight:800}
+.clientes-page .panel{border:1px solid #e2e8e4;border-radius:15px;box-shadow:0 5px 20px #163a2010;padding:20px}
+.clientes-page .panel-heading h2{color:#0b522c;font-size:17px;font-weight:750}
+.clientes-page .clientes-filters{display:grid;grid-template-columns:minmax(220px,1fr) repeat(4,minmax(125px,auto));align-items:center;gap:10px;margin:10px 0 18px}
+.clientes-page .clientes-filters .search{min-width:0;width:100%}
+.clientes-page .clientes-filters input,.clientes-page .clientes-filters select,.clientes-page .clientes-grid input,.clientes-page .clientes-grid select,.clientes-page .clientes-grid textarea,.clientes-page .clientes-preferencia input,.clientes-page .clientes-interaction select,.clientes-page .clientes-interaction textarea{min-height:41px;border:1px solid #d7e0da;border-radius:9px;background:#fff;color:#244d34;padding:10px 12px;max-width:100%;box-shadow:none}
+.clientes-page .clientes-filters input:focus,.clientes-page .clientes-filters select:focus,.clientes-page .clientes-grid input:focus,.clientes-page .clientes-grid select:focus,.clientes-page .clientes-grid textarea:focus{border-color:#16964b;outline:2px solid #c9efd4;outline-offset:0}
+.clientes-page .table-scroll{overflow-x:auto;border:1px solid #e7ece8;border-radius:11px}
+.clientes-page .table-scroll table{width:100%;border-collapse:collapse;min-width:680px;font-size:13px}
+.clientes-page .table-scroll th{background:#edf2ee;color:#335944;text-align:left;font-size:12px;font-weight:750;padding:13px 12px;border-bottom:1px solid #dfe8e1;white-space:nowrap}
+.clientes-page .table-scroll td{padding:12px;border-bottom:1px solid #edf0ed;color:#304b38;vertical-align:middle}
+.clientes-page .table-scroll tr:last-child td{border-bottom:0}
+.clientes-page .table-scroll tbody tr:hover{background:#f5faf6}
+.clientes-page .table-scroll td strong{color:#174d2c}
+.clientes-page .clientes-actions button,.clientes-page .clientes-pagination button,.clientes-page .modal-actions button:not(.primary),.clientes-page .clientes-grid button,.clientes-page .clientes-preferencia button,.clientes-page .clientes-interaction button{border:1px solid #d9e3db;border-radius:8px;background:#f5f8f5;color:#126336;font-size:12px;font-weight:650;padding:8px 11px;min-height:34px}
+.clientes-page .clientes-actions button:hover,.clientes-page .clientes-pagination button:not(:disabled):hover,.clientes-page .modal-actions button:not(.primary):hover{background:#e2f4e7;border-color:#b7dcc1}
+.clientes-page button:disabled{cursor:not-allowed;opacity:.52}
+.clientes-page .empty{padding:25px;text-align:center;color:#7b8980;font-size:13px}
+.clientes-page .clientes-pagination{color:#68786c;font-size:12px}
+.clientes-page .clientes-badge{display:inline-flex;align-items:center;white-space:nowrap}
+.clientes-page .clientes-modal{width:min(960px,calc(100vw - 32px));max-height:min(90vh,950px);border:1px solid #dfe6e0;border-radius:17px;background:#fff;box-shadow:0 22px 80px #0b2c1940;padding:23px}
+.clientes-page .clientes-modal-header{align-items:flex-start;padding-bottom:14px;border-bottom:1px solid #e7eee8}
+.clientes-page .clientes-modal-header h2{margin:0 0 6px;color:#07552d;font-size:23px}
+.clientes-page .clientes-modal-header p{margin:0;color:#6b7b70;font-size:13px}
+.clientes-page .clientes-modal-header>button{border:0;background:#f0f3f1;color:#42604d;border-radius:8px;width:34px;height:34px}
+.clientes-page .clientes-tabs{margin:14px 0 20px;gap:5px;border-bottom:1px solid #e1e9e3}
+.clientes-page .clientes-tabs button{white-space:nowrap;font-size:13px;color:#5b7061;border-radius:8px 8px 0 0;padding:11px 12px}
+.clientes-page .clientes-tabs button.active{color:#086a35;background:#edf8f0;border-bottom:3px solid #168c45}
+.clientes-page .clientes-grid{gap:16px}
+.clientes-page .clientes-grid label,.clientes-page .clientes-preferencia label{color:#244c33;font-size:13px;font-weight:650;gap:7px}
+.clientes-page .clientes-grid small{font-size:11px;font-weight:400;color:#708477}
+.clientes-page .clientes-grid textarea{min-height:85px;resize:vertical}
+.clientes-page .clientes-modal footer{border-top:1px solid #e7ece8;margin-top:20px;padding:15px 0 0;display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap}
+.clientes-page .clientes-history{border-bottom:1px solid #e7eee8;padding:12px 8px}
+.clientes-page .clientes-comercial{background:#edf7f0;border:1px solid #d9ebde;border-radius:11px}
+@media(max-width:1100px){.clientes-page .clientes-filters{grid-template-columns:repeat(3,minmax(0,1fr))}.clientes-page .clientes-filters .search{grid-column:1/-1}}
+@media(max-width:700px){.clientes-page .page-intro{align-items:stretch;flex-direction:column}.clientes-page .page-intro .primary{align-self:flex-start}.clientes-page .clientes-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.clientes-page .clientes-metric{min-height:90px;padding:13px}.clientes-page .clientes-metric strong{font-size:25px}.clientes-page .panel{padding:13px}.clientes-page .clientes-filters{grid-template-columns:1fr;gap:9px}.clientes-page .clientes-filters .search{grid-column:auto}.clientes-page .clientes-filters select{width:100%}.clientes-page .clientes-modal{padding:15px;width:calc(100vw - 18px);max-height:94vh}.clientes-page .clientes-grid,.clientes-page .clientes-preferencia{grid-template-columns:1fr}.clientes-page .clientes-tabs{overflow-x:auto;flex-wrap:nowrap}.clientes-page .clientes-pagination{gap:6px}}
+
+/* Indicadores Naturé — 7 cartões clicáveis, totais derivados da API */
+.clientes-page .clientes-metrics{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-bottom:20px}
+.clientes-page .clientes-metric{appearance:none;min-width:0;min-height:106px;padding:14px 12px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:9px;text-align:left;cursor:pointer;border:1px solid #dce8e1;border-radius:14px;box-shadow:0 3px 12px #133b2210;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.clientes-page .clientes-metric:hover{transform:translateY(-2px);box-shadow:0 6px 18px #133b221a}
+.clientes-page .clientes-metric:focus-visible{outline:3px solid #138a49;outline-offset:2px}
+.clientes-page .clientes-metric.is-selected{border-color:#178747;box-shadow:inset 0 0 0 1px #178747,0 4px 12px #133b2212}
+.clientes-page .clientes-metric-icon{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:9px;background:#ffffffaa;font-size:18px;color:#155a36;line-height:1}
+.clientes-page .clientes-metric-text{display:flex;flex-direction:column;gap:4px;min-width:0}
+.clientes-page .clientes-metric-label{font-size:12px;font-weight:700;color:#476252}
+.clientes-page .clientes-metric strong{font-size:29px;line-height:1;font-weight:800;color:#125e38}
+.clientes-page .clientes-metric--total{background:linear-gradient(145deg,#fff,#e8f3ff)}
+.clientes-page .clientes-metric--ativos{background:linear-gradient(145deg,#fff,#e3f6e9)}
+.clientes-page .clientes-metric--inativos{background:linear-gradient(145deg,#fff,#ffe9e9)}
+.clientes-page .clientes-metric--bronze{background:linear-gradient(145deg,#fff,#f4e2d2)}
+.clientes-page .clientes-metric--prata{background:linear-gradient(145deg,#fff,#e8eaed)}
+.clientes-page .clientes-metric--ouro{background:linear-gradient(145deg,#fff,#fff1c9)}
+.clientes-page .clientes-metric--diamante{background:linear-gradient(145deg,#fff,#dcf3fc)}
+.clientes-page .clientes-metric--inativos strong{color:#ad3441}
+.clientes-page .clientes-metric--bronze strong{color:#8b542d}
+.clientes-page .clientes-metric--prata strong{color:#53616e}
+.clientes-page .clientes-metric--ouro strong{color:#947000}
+.clientes-page .clientes-metric--diamante strong{color:#126a8c}
+@media(max-width:1350px){.clientes-page .clientes-metrics{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:800px){.clientes-page .clientes-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.clientes-page .clientes-metric{min-height:90px;padding:12px}.clientes-page .clientes-metric strong{font-size:25px}}

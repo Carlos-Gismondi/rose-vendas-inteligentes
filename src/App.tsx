@@ -10,7 +10,6 @@ import { useEffect, useState } from 'react'
 import Sidebar from './components/layout/Sidebar'
 import Topbar from './components/layout/Topbar'
 import MobileNav from './components/layout/MobileNav'
-import ClientModal from './components/forms/ClientModal'
 import Toast from './components/ui/Toast'
 import DashboardPage from './pages/DashboardPage'
 import ClientesPage from './pages/ClientesPage'
@@ -33,8 +32,8 @@ function AppLayout() {
   const Page = pages[safePage]
   return <div className={`app ${collapsed ? 'collapsed' : ''}`}>
     <Sidebar />
-    <div className="workspace"><Topbar /><main>{usuario?.perfil === 'REVENDA' && ['Clientes','Pedidos','Relatórios','Contatos','Dashboard'].includes(safePage) ? <section style={{padding:24}}><h2>Área da revenda</h2><p>Os dados individuais estarão disponíveis após a integração da API de clientes e vendas. Nenhum dado de outras contas será exibido.</p></section> : <Page />}</main></div>
-    <MobileNav /><ClientModal /><Toast />
+    <div className="workspace"><Topbar /><main>{usuario?.perfil === 'REVENDA' && ['Pedidos','Relatórios','Contatos','Dashboard'].includes(safePage) ? <section style={{padding:24}}><h2>Área da revenda</h2><p>Os dados individuais estarão disponíveis após a integração da API de clientes e vendas. Nenhum dado de outras contas será exibido.</p></section> : <Page />}</main></div>
+    <MobileNav /><Toast />
   </div>
 }
 function AuthGate() {
