@@ -1,0 +1,39 @@
+/* Naturé v0.3.5 - Etapa 18.40: ajustes mobile, sem alterar o tema desktop */
+@media (max-width: 760px) {
+  html,body,#root { width:100%; max-width:100%; min-height:100%; }
+  body { overflow-x:hidden; }
+  .app,.workspace,main,.panel,.dashboard-grid,.stats { min-width:0; max-width:100%; }
+  .app.collapsed .sidebar.open { width:min(290px,85vw); }
+  .sidebar.open { width:min(290px,85vw); overflow-y:auto; padding-bottom:24px; }
+  .sidebar.open .nav-item { width:100%; min-height:44px; white-space:normal; }
+  .sidebar.open .brand-logo-full { max-width:180px; }
+  .topbar { min-width:0; }
+  .top-left,.top-right { min-width:0; }
+  .topbar h1 { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  main { overflow-wrap:anywhere; }
+  .page-intro { flex-wrap:wrap; }
+  .page-intro > * { min-width:0; }
+  .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .dashboard-grid { grid-template-columns:minmax(0,1fr); }
+  .panel { overflow:hidden; }
+  .table-scroll { max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .chart { max-width:100%; min-width:0; }
+  .modal { width:min(490px,100%); max-height:calc(100dvh - 24px); }
+  .mobile-nav button { min-height:44px; touch-action:manipulation; }
+  button,input,select,textarea { max-width:100%; }
+  input,select,textarea { font-size:16px; }
+}
+@media (max-width: 374px) {
+  .topbar { padding-inline:10px; gap:6px; }
+  main { padding-inline:10px; }
+  .stats { gap:8px; }
+  .stat { padding:8px; }
+  .page-intro select { max-width:100%; }
+  .contact-row { flex-wrap:wrap; }
+  .mobile-nav button { font-size:9px; }
+}
+@media (min-width:761px) and (max-width:1023px) {
+  .dashboard-grid { grid-template-columns:minmax(0,1fr); }
+  .stats { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  main { padding:22px; }
+}

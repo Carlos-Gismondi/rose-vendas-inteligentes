@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Bell, ChevronDown, LogOut, Menu, Settings, UserRound, Check, CheckCheck } from 'lucide-react'
+import { Bell, ChevronDown, LogOut, LockKeyhole, Menu, Settings, UserRound, Check, CheckCheck } from 'lucide-react'
 import { useApp } from '../../context/AppContext'
+import { useAuth } from '../../context/AuthContext'
 import './Topbar.css'
 
 const subtitles: Record<string, string> = {
@@ -12,7 +13,17 @@ const subtitles: Record<string, string> = {
 
 export default function Topbar() {
   const { page, setMenuOpen, setCollapsed, navigate, notify, urgent } = useApp()
+  const { usuario, logout } = useAuth()
+  const nome = usuario?.nome?.trim() || 'Usuário'
+  const perfil = usuario?.perfil === 'ADMIN' ? 'Administrador' : usuario?.perfil === 'OPERADOR' ? 'Operador' : 'Revenda'
   const [open, setOpen] = useState<'notifications' | 'user' | null>(null)
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia('(max-width: 767px)').matches)
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)')
+    const update = () => setIsMobile(mq.matches)
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
   const [read, setRead] = useState<string[]>([])
   const root = useRef<HTMLDivElement>(null)
   const notifications = useMemo(() => urgent.map(client => ({
@@ -54,12 +65,13 @@ export default function Topbar() {
       </div>
       <div className="nature-popover-anchor nature-user-anchor">
         <button type="button" className="nature-user-button" aria-label="Abrir menu do usuário" aria-expanded={open === 'user'} aria-controls="nature-user-menu" onClick={() => setOpen(v => v === 'user' ? null : 'user')}>
-          <span className="nature-user-text"><strong>Rose</strong><small>Consultora</small></span><span className="avatar nature-user-avatar">R</span><ChevronDown className="nature-user-chevron" size={16}/>
+          <span className="nature-user-text"><strong>{nome}</strong><small>{perfil}</small></span><span className="avatar nature-user-avatar">{nome.charAt(0).toLocaleUpperCase('pt-BR')}</span><ChevronDown className="nature-user-chevron" size={16}/>
         </button>
         {open === 'user' && <div id="nature-user-menu" className="nature-dropdown nature-user-menu" role="menu">
-          <button type="button" role="menuitem" onClick={() => { setOpen(null); notify('Meu perfil estará disponível quando o cadastro de usuários for implementado.') }}><UserRound size={18}/> Meu perfil</button>
+          <button type="button" role="menuitem" onClick={() => { setOpen(null); notify('A edição do perfil será disponibilizada em uma próxima etapa.') }}><UserRound size={18}/> Meu perfil</button>
           <button type="button" role="menuitem" onClick={() => go('Configurações')}><Settings size={18}/> Configurações</button>
-          <button type="button" role="menuitem" className="nature-logout" onClick={() => { setOpen(null); notify('Sair estará disponível quando a autenticação for implementada.') }}><LogOut size={18}/> Sair</button>
+          {isMobile && <button type="button" role="menuitem" className="nature-logout" onClick={() => { setOpen(null); window.dispatchEvent(new Event('nature:lock')) }}><LockKeyhole size={18}/> Bloquear</button>}
+          <button type="button" role="menuitem" className="nature-logout" onClick={() => { setOpen(null); void logout() }}><LogOut size={18}/> {isMobile ? 'Encerrar sessão' : 'Sair'}</button>
         </div>}
       </div>
     </div>

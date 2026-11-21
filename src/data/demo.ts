@@ -1,4 +1,4 @@
-export type Page = 'Dashboard' | 'Clientes' | 'Produtos' | 'Pedidos' | 'Contatos' | 'Relatórios' | 'Configurações'
+export type Page = 'Dashboard' | 'Clientes' | 'Produtos' | 'Pedidos' | 'Contatos' | 'Relatórios' | 'Configurações' | 'Usuários'
 export type Client = { id: number; name: string; phone: string; product: string; last: string; due: string; status: 'Atrasado' | 'Hoje' | 'Próximo'; inadimplente?: boolean }
 export const initialClients: Client[] = [
   { id: 1, name: 'Maria Silva', phone: '(11) 99999-1234', product: 'Hidratante Corporal', last: '10/10/2026', due: '17/11/2026', status: 'Atrasado' },

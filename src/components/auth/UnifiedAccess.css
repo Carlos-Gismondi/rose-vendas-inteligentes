@@ -1,0 +1,21 @@
+/* Tela unificada Naturé — layout inspirado na referência fornecida */
+.nature-access-page{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:20px;background:linear-gradient(145deg,#e9f5ec,#f5faf6 55%,#dcefe2);font-family:Arial,sans-serif;color:#173b25}
+.nature-access-card{width:100%;max-width:440px;background:#fff;border:1px solid #dce8df;border-radius:17px;padding:26px 22px 20px;box-shadow:0 18px 44px #104b2617;text-align:center}
+.nature-access-logo{display:block;width:min(210px,75%);height:auto;margin:0 auto 18px}
+.nature-access-card h1{font-size:24px;margin:0 0 9px;color:#12592c}
+.nature-access-subtitle{font-size:13px;line-height:1.5;color:#607566;margin:0 0 22px}
+.nature-access-tabs{display:flex;flex-direction:column;border:1px solid #d7e4da;border-radius:8px;overflow:hidden;margin-bottom:24px;box-shadow:0 3px 8px #173b2510}
+.nature-access-tabs button{min-height:43px;background:#fff;color:#155b32;border:0;cursor:pointer;font-size:14px;font-weight:700}
+.nature-access-tabs button+button{border-top:1px solid #e5ece7}.nature-access-tabs button.active{background:#168044;color:#fff}
+.nature-access-pattern h2{font-size:15px;margin:0 0 16px}.nature-access-hint,.nature-access-help{font-size:12px;line-height:1.5;color:#627568;margin:8px 0 14px}
+.nature-access-grid{width:min(240px,75vw);height:min(240px,75vw);margin:10px auto 8px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);position:relative;touch-action:none;user-select:none}
+.nature-access-grid button{background:transparent;border:0;display:grid;place-items:center;padding:0;touch-action:none}.nature-access-grid button span{width:30px;height:30px;border:2px solid #168044;border-radius:50%;display:grid;place-items:center;background:#fff}.nature-access-grid button span:after{content:'';width:5px;height:5px;background:#168044;border-radius:50%}.nature-access-grid button.selected span{background:#bfe7ca}.nature-access-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.nature-access-clear{display:block;margin:0 0 10px;border:0;background:none;color:#517b5d;font-size:12px;cursor:pointer;padding:8px}
+.nature-access-submit{width:100%;min-height:44px;background:#168044;color:#fff;border:0;border-radius:7px;font-size:14px;font-weight:700;cursor:pointer}.nature-access-submit:disabled{opacity:.65;cursor:default}
+.nature-access-form{text-align:left;display:flex;flex-direction:column;gap:8px}.nature-access-form label{font-size:13px;font-weight:700}.nature-access-form input{min-height:44px;border:1px solid #cdded1;border-radius:7px;padding:0 12px;margin-bottom:10px;color:#173b25;background:#fff}.nature-access-form input:focus{outline:2px solid #83c99a}
+.nature-access-error{color:#b42318;font-size:12px;line-height:1.5;background:#fff1f1;border-radius:6px;padding:9px;margin:10px 0}
+.nature-access-help button{background:none;border:0;text-decoration:underline;color:#126f3b;cursor:pointer}
+.nature-access-card footer{border-top:1px solid #e5ece7;margin-top:20px;padding-top:14px;color:#6e8273;font-size:11px}
+@media(max-width:480px){.nature-access-page{padding:12px}.nature-access-card{padding:22px 16px}}
+
+.nature-account-label{display:flex;flex-direction:column;gap:6px;text-align:left;font-size:13px;margin:14px 0;color:#155c37}.nature-account-label input{width:100%;padding:11px;border:1px solid #b8d4c1;border-radius:8px;font:inherit;box-sizing:border-box}

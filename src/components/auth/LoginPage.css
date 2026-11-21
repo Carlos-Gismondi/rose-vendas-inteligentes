@@ -1,0 +1,253 @@
+/* =========================================
+   NATURÉ VENDAS INTELIGENTES
+   TELA DE LOGIN
+   ========================================= */
+
+.nature-login {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: linear-gradient(
+    135deg,
+    #e8f5e9 0%,
+    #f8faf8 55%,
+    #dcefe0 100%
+  );
+
+  font-family: Arial, sans-serif;
+}
+
+/* CARTÃO */
+
+.nature-login-card {
+  width: 100%;
+  max-width: 440px;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2ebe4;
+  border-radius: 20px;
+
+  box-shadow: 0 16px 48px rgba(16, 75, 38, 0.10);
+}
+
+/* LOGOTIPO OFICIAL */
+
+.nature-login-brand {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.nature-login-logo {
+  display: block;
+
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+}
+
+/* TÍTULO */
+
+.nature-login-heading {
+  margin-bottom: 28px;
+}
+
+.nature-login-heading h2 {
+  margin: 0 0 8px;
+
+  color: #173b25;
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.nature-login-heading p {
+  margin: 0;
+
+  color: #6b7b70;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* FORMULÁRIO */
+
+.nature-login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.nature-login form > label {
+  margin-bottom: 8px;
+
+  color: #294633;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* CAMPOS */
+
+.nature-login-input {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 50px;
+
+  padding: 0 14px;
+  margin-bottom: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #d7e3da;
+  border-radius: 10px;
+
+  color: #64836c;
+}
+
+.nature-login-input:focus-within {
+  border-color: #16803c;
+
+  box-shadow: 0 0 0 3px rgba(22, 128, 60, 0.12);
+}
+
+.nature-login-input input {
+  flex: 1;
+
+  width: 100%;
+  min-width: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #173b25;
+
+  font-size: 15px;
+}
+
+.nature-login-input input::placeholder {
+  color: #9aa9a0;
+}
+
+/* MOSTRAR / OCULTAR SENHA */
+
+.nature-login-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #64836c;
+
+  cursor: pointer;
+}
+
+/* ERROS */
+
+.nature-login-error {
+  margin: 0 0 16px;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  background: #fff0f0;
+
+  color: #b42318;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* BOTÃO ENTRAR */
+
+.nature-login-submit {
+  width: 100%;
+  min-height: 50px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #16803c;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.nature-login-submit:hover:not(:disabled) {
+  background: #10652e;
+}
+
+.nature-login-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* RODAPÉ */
+
+.nature-login-footer {
+  margin-top: 30px;
+
+  text-align: center;
+
+  color: #87958b;
+
+  font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 480px) {
+  .nature-login {
+    padding: 16px;
+  }
+
+  .nature-login-card {
+    padding: 28px 22px;
+
+    border-radius: 16px;
+  }
+
+  .nature-login-logo {
+    max-width: 190px;
+  }
+
+  .nature-login-heading h2 {
+    font-size: 21px;
+  }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+  .nature-login-submit {
+    transition: none;
+  }
+}

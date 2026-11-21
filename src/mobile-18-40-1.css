@@ -1,0 +1,37 @@
+/* Nature 18.40.1 - camada de responsividade sobre os estilos homologados. */
+@media (max-width: 760px) {
+  html, body, #root { width: 100%; min-width: 0; max-width: 100%; }
+  body { overflow-x: hidden; }
+  .app, .app.collapsed { --side: 0px; width: 100%; min-width: 0; }
+  .workspace, .app.collapsed .workspace { margin-left: 0; width: 100%; min-width: 0; }
+  .sidebar, .app.collapsed .sidebar { width: min(290px, 86vw); transform: translateX(-105%); transition: transform .2s ease; z-index: 50; overflow-y: auto; }
+  .sidebar.open, .app.collapsed .sidebar.open { transform: translateX(0); width: min(290px, 86vw); }
+  .backdrop { z-index: 49; }
+  .sidebar .nav-item, .app.collapsed .sidebar.open .nav-item { width: 100%; min-height: 46px; white-space: normal; }
+  .mobile-close-menu { display: flex; align-items: center; justify-content: center; align-self: flex-end; margin: 0 6px 12px; border: 1px solid #c7ddcd; background: #fff; color: #075529; padding: 9px 12px; border-radius: 9px; }
+  .menu-trigger { display: inline-flex !important; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+  .collapse-trigger { display: none !important; }
+  .topbar, .nature-topbar { width: 100%; min-width: 0; }
+  .nature-top-left, .nature-top-right, .nature-page-heading { min-width: 0; }
+  .nature-page-heading h1 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  main { min-width: 0; width: 100%; padding: 18px 12px calc(105px + env(safe-area-inset-bottom)); }
+  .page-intro { flex-wrap: wrap; align-items: flex-start; }
+  .page-intro > * { min-width: 0; }
+  .stats, .nature-dashboard-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .dashboard-grid, .report-stats { grid-template-columns: minmax(0, 1fr); }
+  .panel, .chart, .contact-list, .contact-row { min-width: 0; max-width: 100%; }
+  .panel { overflow: hidden; }
+  .table-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .mobile-nav { display: grid; }
+  .mobile-nav button { min-height: 48px; touch-action: manipulation; }
+  input, select, textarea { font-size: 16px; }
+  .modal { width: min(490px, 100%); max-height: calc(100dvh - 24px); }
+}
+@media (max-width: 420px) {
+  .stats, .nature-dashboard-stats { grid-template-columns: minmax(0, 1fr); }
+  .nature-page-heading > span { display: none; }
+  .topbar, .nature-topbar { padding-inline: 9px; }
+  .nature-top-left, .nature-top-right { gap: 4px; }
+}
+@media (min-width: 761px) { .mobile-close-menu { display: none; } }
+@media (prefers-reduced-motion: reduce) { .sidebar { transition: none !important; } }

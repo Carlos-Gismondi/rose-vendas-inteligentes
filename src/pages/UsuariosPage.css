@@ -1,0 +1,16 @@
+.users-filter{display:flex;gap:8px;margin-bottom:13px;flex-wrap:wrap}
+.users-filter button{border:0;border-radius:7px;padding:10px 13px;background:#edf4ef;color:#315d3e}
+.users-filter button.active{background:#087d35;color:white}
+.users-actions{display:flex;gap:7px;flex-wrap:wrap}
+.users-actions button{background:#eef5ef;border:1px solid #d7e6da;border-radius:7px;padding:7px 10px;color:#165a31;font-size:12px}
+.users-actions button:hover{background:#dfeee2}
+.users-actions button:disabled{opacity:.5;cursor:not-allowed}
+.users-status{display:inline-block;padding:5px 8px;border-radius:6px;font-size:11px;font-weight:700}
+.users-status.is-active{background:#e2f6e5;color:#16723a}
+.users-status.is-inactive{background:#ffe4e7;color:#b4233b}
+.users-alert{padding:12px 15px;border-radius:9px;margin-bottom:15px;font-size:13px}
+.users-error{background:#fff0f0;color:#b91c1c}
+.users-success{background:#e7f6ea;color:#166534}
+.users-modal select{padding:11px;border:1px solid #d5e1d8;border-radius:8px;width:100%;background:white}
+.users-modal small{font-size:11px;color:#617267}
+@media(max-width:760px){.users-actions{min-width:205px}}

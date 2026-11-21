@@ -1,5 +1,0 @@
-Naturé v0.3.2 — Atualização da sidebar prata com troca de logo.
-Copie as pastas frontend/src e frontend/public para a pasta do projeto, substituindo arquivos.
-O logo completo existente em frontend/public/logo-nature.png deve permanecer.
-Sidebar aberta: logo completo. Recolhida: símbolo N.
-Atualize com Ctrl+F5 e teste.
